@@ -1,0 +1,28 @@
+- hosts: all
+  roles:
+    - { role: datadog.datadog, become: yes }
+  vars:
+    datadog_site: "datadoghq.com"
+    datadog_agent_major_version: 7
+    datadog_api_key: <datadog_api_key>
+    datadog_agent_allow_downgrade: true
+    datadog_config:
+      logs_enabled: true
+      network_config:
+        enabled: true
+      tags:
+        - "dbm:true"
+        - "dbms:sqlserver"
+        - "env:uat" 
+        - "host:<host_id>" 
+      proxy:
+        https: http://<USERNAME>:<PASSWORD>@<PROXY_SERVER_FOR_HTTPS>:<PORT>
+      apm_config:
+        enabled: true
+      process_config:
+        process_collection:
+          enabled: true
+        process_discovery:
+          enabled: true
+          interval: 4h
+      logs_enabled: true
