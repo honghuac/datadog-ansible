@@ -1,4 +1,4 @@
-# Ansible Datadog Role
+# Ansible Datadog Playbook
 
 This Ansible playbook installs and configures the Datadog Agent. It utilizes the Datadog role to achieve this.
 
