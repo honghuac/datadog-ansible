@@ -17,6 +17,10 @@ This Ansible playbook installs and configures the Datadog Agent. It utilizes the
 
 ### Installation
 
-Execute this command on your PC (substituting the User ID for the server host as well as file name of the private key):
+1. Git clone this repo.
+
+```git clone https://github.com/honghuac/datadog-ansible/```
+
+2. Execute this command on your PC (substituting the User ID for the server host as well as file name of the private key):
 
 ```ansible-playbook -i ~/hosts -u <user_id_on_server_host> --private-key=~/.ssh/<private_key_file> dd_agent.yml```
